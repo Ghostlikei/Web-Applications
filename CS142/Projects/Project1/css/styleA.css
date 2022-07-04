@@ -20,6 +20,7 @@ body,html{
     margin:0 auto;
     width: 100px;
     height: 100px;
+    flex-shrink:0;
     
     border-top-style: solid;
     border-top-width: 1px;

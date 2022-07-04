@@ -1,0 +1,36 @@
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.item{ 
+    position: relative;
+    flex:0 0 auto;
+
+    width: 100px;
+    height: 150px;
+    
+    background-color: #eeeff2;
+    margin-top: 0px;
+    margin-right: 10px;
+
+    border-left:10px dotted #D0D0FF;
+    padding: 10px;
+
+    font-family: Tahoma;
+    font-size: 40px;
+
+    cursor:pointer;
+}
+.item:hover{
+    background-color: yellow;
+    color: goldenrod;
+}
+.f{
+    margin-right: 0px;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;    
+}
