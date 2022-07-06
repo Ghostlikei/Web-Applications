@@ -317,6 +317,8 @@ Primitive types:
 
 
 
+[callback](https://zhuanlan.zhihu.com/p/113069353)
+
 ! STILL WRITING
 
 
@@ -431,6 +433,10 @@ Then get element: `let elem = document.querySelector('#button')`(select id="butt
 
 For DOM objects:`addEventListener(eventName, functionName)`
 
+- Remove event listeners
+
+`removeEventListener(eventName, functionName)`
+
 - Use defer
 
 `<script src="script.js" defer></script>`
@@ -438,6 +444,55 @@ For DOM objects:`addEventListener(eventName, functionName)`
 Execute after DOM is loaded
 
 **DO NOT** put <script> at the bottom
+
+---
+
+Interactions:
+
+- Adding and removing classes
+
+```
+domObject.classList.add('class name');
+domObject.classList.remove('existing name');
+```
+
+More on [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+
+- Finding the element twice
+
+```js
+function func(event){
+	const element = event.currentTarger;
+	// operations
+}
+
+const element = document.querySelector("tag");
+element.addEventListener('click', func);
+```
+
+event.target(clicked or focused)
+
+event.currentTarget(the original handler was attatched to)
+
+- Properties of element objects
+
+id, innerHTML, textContent, classList
+
+---
+
+**Changing elements**
+
+```js
+document.createElement(tag string);
+element.appendChild(element);
+element.remove() // or element.innerHTML='';
+```
+
+
+
+- using `display:none` ,`element.classList.add('hidden')`
+
+Load the element but not rendering (拿来防止渲染卡顿问题)
 
 
 
